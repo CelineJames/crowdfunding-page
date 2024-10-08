@@ -414,7 +414,7 @@ main {
 }
 
 .bamboo-cards {
-  outline: 0.5px solid #adadad;
+  outline: 1px solid #adadad;
   border-radius: 8px;
   margin-top: 2rem;
   padding: 2rem;
