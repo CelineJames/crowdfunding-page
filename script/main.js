@@ -12,7 +12,7 @@ const hamburgerIcon = document.querySelector(".hamburger");
 const pledgeInputs = document.querySelectorAll("input");
 let pledgeLeft = document.querySelectorAll(".nums");
 const mobileMenu = document.querySelector(".nav-items");
-const fakeButtons = document.querySelectorAll(".double-text");
+const fakeButtons = document.querySelectorAll(".double");
 const tsrc = "./assets/icon-close-menu.svg";
 
 console.dir(pledgeInputs);
