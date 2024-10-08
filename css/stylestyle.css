@@ -1,22 +1,18 @@
-.btn-secondary,
-.btn-primary {
+.btn-secondary, .btn-primary {
   display: inline-block;
   padding: 15px 30px;
   border-radius: 35px;
 }
 @media (max-width: 450px) {
-  .btn-secondary,
-  .btn-primary {
+  .btn-secondary, .btn-primary {
     padding: 12px 20px;
   }
 }
-.btn-secondary:hover,
-.btn-primary:hover {
+.btn-secondary:hover, .btn-primary:hover {
   background-color: hsl(176, 72%, 28%);
   cursor: pointer;
 }
-.btn-secondary:active,
-.btn-primary:active {
+.btn-secondary:active, .btn-primary:active {
   background-color: hsl(176, 72%, 28%);
 }
 
@@ -86,8 +82,8 @@ a {
 }
 
 .hamburger {
-  width: 25px;
-  height: 18px;
+  width: 20px;
+  height: 15px;
   display: none;
 }
 @media (max-width: 450px) {
@@ -185,7 +181,7 @@ main {
 .first .mastercraft-logo {
   position: absolute;
   top: -25px;
-  left: 50%;
+  left: 45%;
 }
 .first .mastercraft {
   text-align: center;
@@ -414,14 +410,14 @@ main {
 }
 
 .bamboo-cards {
-  outline: 1px solid #adadad;
+  outline: 0.2px solid #adadad;
   border-radius: 8px;
   margin-top: 2rem;
   padding: 2rem;
 }
 @media (max-width: 760px) {
   .bamboo-cards {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 }
 @media (max-width: 450px) {
@@ -567,6 +563,9 @@ dialog h3 {
   }
 }
 dialog .checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -591,8 +590,6 @@ dialog .modal-para > p {
   position: absolute;
   width: 10px;
   height: 10px;
-  top: 4px;
-  left: 4px;
   border-radius: 50%;
   background-color: transparent;
 }
@@ -735,12 +732,14 @@ dialog::backdrop {
     margin-bottom: 1rem;
   }
 }
-.pledge-div input[type="number"] {
+.pledge-div input[type=number] {
   width: 100%;
+  padding: 0.7rem;
+  border-radius: 8px;
   border: none;
 }
 @media (max-width: 450px) {
-  .pledge-div input[type="number"] {
+  .pledge-div input[type=number] {
     width: 100%;
   }
 }
@@ -838,4 +837,4 @@ dialog::backdrop {
 }
 .dialog2 .got-it {
   letter-spacing: 1px;
-} /*# sourceMappingURL=stylestyle.css.map */
+}/*# sourceMappingURL=stylestyle.css.map */

@@ -45,8 +45,8 @@ a {
   }
 }
 .hamburger {
-  width: 25px;
-  height: 18px;
+  width: 20px;
+  height: 15px;
   display: none;
   @include phone {
     display: inline-block;
@@ -167,7 +167,8 @@ main {
   .mastercraft-logo {
     position: absolute;
     top: -25px;
-    left: 50%;
+
+    left: 45%;
   }
 
   .mastercraft {
@@ -534,6 +535,9 @@ dialog {
   }
 
   .checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 18px;
     height: 18px;
     border-radius: 50%;
@@ -556,10 +560,7 @@ dialog {
 .checkbox-selected {
   position: absolute;
   width: 10px;
-  // display: none;
   height: 10px;
-  top: 4px;
-  left: 4px;
   border-radius: 50%;
   background-color: transparent;
 }
@@ -702,6 +703,8 @@ dialog::backdrop {
   }
   input[type="number"] {
     width: 100%;
+    padding: 0.7rem;
+    border-radius: 8px;
     border: none;
     @include phone {
       width: 100%;

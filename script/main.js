@@ -12,11 +12,24 @@ const hamburgerIcon = document.querySelector(".hamburger");
 const pledgeInputs = document.querySelectorAll("input");
 let pledgeLeft = document.querySelectorAll(".nums");
 const mobileMenu = document.querySelector(".nav-items");
-const fakeButtons = document.querySelectorAll(".double");
+const fakeButtons = document.querySelectorAll(".double-text");
+const tsrc = "./assets/icon-close-menu.svg";
 
 console.dir(pledgeInputs);
+console.dir(fakeButtons);
+
+fakeButtons.forEach(function (fakeButton, offset) {
+  fakeButton.addEventListener("click", () => {
+    console.log(pledgeInputs[offset].value);
+  });
+});
 
 hamburgerIcon.addEventListener("click", () => {
+  if (hamburgerIcon.getAttribute("src") === "./assets/icon-hamburger.svg") {
+    hamburgerIcon.setAttribute("src", "./assets/icon-close-menu.svg");
+  } else {
+    hamburgerIcon.setAttribute("src", "./assets/icon-hamburger.svg");
+  }
   mobileMenu.classList.toggle("show");
 });
 
@@ -25,19 +38,18 @@ pledgeInputs.forEach((pledgeInput) => {
     setTimeout(() => {
       if (pledgeInput.value < 25) {
         pledgeInput.style.border = "1px solid red";
+      } else if (pledgeInput.value === "") {
+        pledgeInput.style.border = "none";
       } else {
         pledgeInput.style.border = "none";
       }
     }, 1000);
   });
-  fakeButtons.forEach((fakeButton) => {
-    console.dir(fakeButton);
-  });
 });
 
 bookmarkButton.addEventListener("click", () => {
-  bookmarkButton.firstElementChild.classList.toggle("bn-image");
-  bookmarkButton.lastElementChild.classList.toggle("active");
+  bookmarkButton.lastElementChild.classList.toggle("bn-image");
+  bookmarkButton.firstElementChild.classList.toggle("active");
 });
 
 showModalButton.forEach((button) => {
