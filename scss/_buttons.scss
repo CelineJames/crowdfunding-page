@@ -1,0 +1,36 @@
+@import "breakpoints";
+
+%btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 35px;
+  @include phone {
+    padding: 12px 20px;
+  }
+
+  &:hover {
+    background-color: $dark-cyan;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: $dark-cyan;
+  }
+}
+
+.btn-primary {
+  @extend %btn;
+  background-color: $moderate-cyan;
+  color: $text-white;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+}
+
+.btn-secondary {
+  @extend %btn;
+  background-color: $dark-gray;
+  color: $text-white;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+}
