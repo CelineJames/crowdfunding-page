@@ -253,18 +253,6 @@ main {
   }
 }
 
-.bookmark:hover .bookmark-image::before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  background-color: hsla(0, 0%, 48%, 0.5);
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-}
-
 .active {
   color: $moderate-cyan;
   font-weight: 700;
@@ -626,7 +614,7 @@ dialog::backdrop {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.3rem;
+    // margin-bottom: 0.3rem;
     gap: 10px;
 
     .numbers {
