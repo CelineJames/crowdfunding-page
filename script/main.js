@@ -13,14 +13,15 @@ const pledgeInputs = document.querySelectorAll("input");
 let pledgeLeft = document.querySelectorAll(".nums");
 const mobileMenu = document.querySelector(".nav-items");
 const fakeButtons = document.querySelectorAll(".double");
-const tsrc = "./assets/icon-close-menu.svg";
+const primaryButtons = document.querySelectorAll(".continue");
 
 console.dir(pledgeInputs);
-console.dir(fakeButtons);
+console.dir(primaryButtons);
 
 fakeButtons.forEach(function (fakeButton, offset) {
   fakeButton.addEventListener("click", () => {
     console.log(pledgeInputs[offset].value);
+    fa;
   });
 });
 
@@ -33,18 +34,26 @@ hamburgerIcon.addEventListener("click", () => {
   mobileMenu.classList.toggle("show");
 });
 
-pledgeInputs.forEach((pledgeInput) => {
+pledgeInputs.forEach((pledgeInput, offset) => {
   pledgeInput.addEventListener("input", () => {
+    fakeButtons[offset].textContent = pledgeInput.value;
     setTimeout(() => {
-      if (pledgeInput.value < 25) {
+      if (pledgeInputs[0].value < 25 && pledgeInputs[1].value < 75) {
         pledgeInput.style.border = "1px solid red";
+        primaryButtons[offset].disabled = true;
       } else if (pledgeInput.value === "") {
         pledgeInput.style.border = "none";
       } else {
         pledgeInput.style.border = "none";
+        primaryButtons[offset].disabled = false;
       }
     }, 1000);
   });
+});
+
+fakeButtons.forEach((fakebutton) => {
+  fakebutton.style.overflowX = "scroll";
+  console.dir(fakebutton);
 });
 
 bookmarkButton.addEventListener("click", () => {
@@ -62,6 +71,7 @@ showModalButton.forEach((button) => {
 closeModalButton.addEventListener("click", () => {
   body.classList.remove("overflow");
   dialog.close();
+  location.reload();
 });
 
 checkBoxes.forEach(function (checkBox, offset) {
@@ -84,4 +94,5 @@ dialog2.lastElementChild.addEventListener("click", () => {
   body.classList.remove("overflow");
   dialog.close();
   dialog2.close();
+  location.reload();
 });

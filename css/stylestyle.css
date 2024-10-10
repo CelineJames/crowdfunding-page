@@ -760,6 +760,7 @@ dialog::backdrop {
   }
 }
 .pledge-div .fake-button {
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -778,6 +779,9 @@ dialog::backdrop {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+.pledge-div .double::-webkit-scrollbar {
+  display: none;
 }
 .pledge-div .fake-hr {
   height: 1.2rem;

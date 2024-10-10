@@ -728,6 +728,7 @@ dialog::backdrop {
   }
 
   .fake-button {
+    padding: 0 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -748,6 +749,9 @@ dialog::backdrop {
     display: flex;
     align-items: center;
     gap: 5px;
+  }
+  .double::-webkit-scrollbar {
+    display: none;
   }
 
   .fake-hr {
