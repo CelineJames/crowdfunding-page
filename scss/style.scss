@@ -575,6 +575,7 @@ dialog::backdrop {
 }
 
 .modal-card {
+  position: relative;
   outline: 1px solid lighten($dark-gray, 30%);
   border-radius: 5px;
   padding: 1rem;

@@ -15,12 +15,13 @@ const mobileMenu = document.querySelector(".nav-items");
 const fakeButtons = document.querySelectorAll(".double");
 const primaryButtons = document.querySelectorAll(".continue");
 let numbersLeft = document.querySelectorAll(".nums");
+let bambooCards = document.querySelectorAll(".bamboo-cards");
+
+console.dir(primaryButtons);
 
 // LAST POINT OF CORRECTION
 
-// let textHolder = $("#hello-world");
-
-console.dir(numbersLeft);
+// let textHolder = $("#hello-world
 // console.log(textHolder);
 
 // console.log($("#hello-world").text());
@@ -40,11 +41,13 @@ console.dir(numbersLeft);
 modalcards.forEach((modalcard, offset) => {
   modalcard.addEventListener("click", (e) => {
     let clickedElement = e.target;
+
     if (e.target.classList.contains("continue")) {
       let newNode = +e.target.offsetParent.querySelector(".nums").innerHTML;
 
       modalcard.querySelector(".nums").innerHTML = --newNode;
       modalcard.querySelector("#enter-pledge").value = "";
+
       // num = Number(newNode);
       // const element = modalcard.querySelector(".numbers").children[0];
       // element.replaceChild(newNode, element.childNodes[0]);
