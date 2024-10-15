@@ -14,15 +14,46 @@ let pledgeLeft = document.querySelectorAll(".nums");
 const mobileMenu = document.querySelector(".nav-items");
 const fakeButtons = document.querySelectorAll(".double");
 const primaryButtons = document.querySelectorAll(".continue");
+let numbersLeft = document.querySelectorAll(".nums");
 
-console.dir(pledgeInputs);
-console.dir(primaryButtons);
+// LAST POINT OF CORRECTION
 
-fakeButtons.forEach(function (fakeButton, offset) {
-  fakeButton.addEventListener("click", () => {
-    console.log(pledgeInputs[offset].value);
-    fa;
+// let textHolder = $("#hello-world");
+
+console.dir(numbersLeft);
+// console.log(textHolder);
+
+// console.log($("#hello-world").text());
+// $("#hello-world").text("This is another text");
+
+// $("#hello-world").click(function () {
+//   console.log("Clicked");
+//   $("#another-text").fadeOut(1000);
+// });
+
+// numbersLeft.forEach((number, offset) => {
+//   primaryButtons[offset].addEventListener("click", () => {
+//     number.textContent = 1;
+//   });
+// });
+
+modalcards.forEach((modalcard, offset) => {
+  modalcard.addEventListener("click", (e) => {
+    let clickedElement = e.target;
+    if (e.target.classList.contains("continue")) {
+      let newNode = +e.target.offsetParent.querySelector(".nums").innerHTML;
+
+      modalcard.querySelector(".nums").innerHTML = --newNode;
+      modalcard.querySelector("#enter-pledge").value = "";
+      // num = Number(newNode);
+      // const element = modalcard.querySelector(".numbers").children[0];
+      // element.replaceChild(newNode, element.childNodes[0]);
+    }
   });
+});
+
+primaryButtons.forEach((primaryButton, offset) => {
+  primaryButton.disabled = true;
 });
 
 hamburgerIcon.addEventListener("click", () => {
@@ -71,7 +102,7 @@ showModalButton.forEach((button) => {
 closeModalButton.addEventListener("click", () => {
   body.classList.remove("overflow");
   dialog.close();
-  location.reload();
+  // location.reload();
 });
 
 checkBoxes.forEach(function (checkBox, offset) {
@@ -94,5 +125,5 @@ dialog2.lastElementChild.addEventListener("click", () => {
   body.classList.remove("overflow");
   dialog.close();
   dialog2.close();
-  location.reload();
+  // location.reload();
 });

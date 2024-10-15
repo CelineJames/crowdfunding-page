@@ -559,8 +559,6 @@ dialog .checkbox {
   border-radius: 50%;
   border: 1px solid #adadad;
   position: relative;
-  top: 0;
-  left: 100;
 }
 dialog .modal-para > p {
   font-size: 1rem;
