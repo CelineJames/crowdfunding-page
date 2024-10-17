@@ -51,10 +51,8 @@ modalcards.forEach((modalcard, offset) => {
       modalcard.querySelector("#enter-pledge").value = "";
 
       bambooCards.forEach((bc) => {
-        let outbc = bc.querySelector(".stats-number");
-        if (outbc.innerHTML === 0) {
-          outbc.innerHTML === outbc.innerHTML;
-        } else if (
+        let outbc = bc.querySelector(".num1");
+        if (
           outbc.innerHTML > 70 &&
           modalcard.querySelector(".num").innerHTML > 70
         ) {
