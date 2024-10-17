@@ -50,6 +50,23 @@ modalcards.forEach((modalcard, offset) => {
       modalcard.querySelector(".nums").innerHTML = --newNode1;
       modalcard.querySelector("#enter-pledge").value = "";
 
+      bambooCards.forEach((bc) => {
+        let outbc = bc.querySelector(".stats-number");
+        if (outbc.innerHTML === 0) {
+          outbc.innerHTML === outbc.innerHTML;
+        } else if (
+          outbc.innerHTML > 70 &&
+          modalcard.querySelector(".num").innerHTML > 70
+        ) {
+          outbc.innerHTML -= 1;
+        } else if (
+          outbc.innerHTML < 70 &&
+          modalcard.querySelector(".num").innerHTML < 70
+        ) {
+          outbc.innerHTML -= 1;
+        }
+      });
+
       // num = Number(newNode);
       // const element = modalcard.querySelector(".numbers").children[0];
       // element.replaceChild(newNode, element.childNodes[0]);
