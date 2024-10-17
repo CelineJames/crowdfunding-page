@@ -43,9 +43,11 @@ modalcards.forEach((modalcard, offset) => {
     let clickedElement = e.target;
 
     if (e.target.classList.contains("continue")) {
-      let newNode = +e.target.offsetParent.querySelector(".nums").innerHTML;
+      let newNode = +e.target.offsetParent.querySelector(".num").innerHTML;
+      let newNode1 = +e.target.offsetParent.querySelector(".nums").innerHTML;
 
-      modalcard.querySelector(".nums").innerHTML = --newNode;
+      modalcard.querySelector(".num").innerHTML = --newNode;
+      modalcard.querySelector(".nums").innerHTML = --newNode1;
       modalcard.querySelector("#enter-pledge").value = "";
 
       // num = Number(newNode);
