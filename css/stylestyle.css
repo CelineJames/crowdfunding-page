@@ -719,6 +719,7 @@ dialog::backdrop {
   }
 }
 .pledge-div input[type=number] {
+  font-size: 1rem;
   width: 100%;
   padding: 0.7rem;
   border-radius: 8px;
@@ -741,7 +742,6 @@ dialog::backdrop {
 }
 @media (max-width: 450px) {
   .pledge-div ::placeholder {
-    font-size: 0.9rem;
     text-align: center;
   }
 }

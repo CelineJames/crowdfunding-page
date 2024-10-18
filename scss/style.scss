@@ -689,6 +689,7 @@ dialog::backdrop {
     }
   }
   input[type="number"] {
+    font-size: 1rem;
     width: 100%;
     padding: 0.7rem;
     border-radius: 8px;
@@ -709,7 +710,6 @@ dialog::backdrop {
     font-weight: 500;
     color: $dark-gray;
     @include phone {
-      font-size: 0.9rem;
       text-align: center;
     }
   }
