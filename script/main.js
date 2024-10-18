@@ -17,7 +17,7 @@ const primaryButtons = document.querySelectorAll(".continue");
 let numbersLeft = document.querySelectorAll(".nums");
 let bambooCards = document.querySelectorAll(".bamboo-cards");
 
-console.dir(primaryButtons);
+console.dir(pledgeInputs);
 
 // LAST POINT OF CORRECTION
 
@@ -86,6 +86,8 @@ hamburgerIcon.addEventListener("click", () => {
 });
 
 pledgeInputs.forEach((pledgeInput, offset) => {
+  pledgeInput.autofocus = true;
+  pledgeInput.focus();  
   pledgeInput.addEventListener("input", () => {
     fakeButtons[offset].textContent = pledgeInput.value;
     setTimeout(() => {
